@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{ECBDF5A0-163C-4DEF-93FB-BFB2F6C3E32C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animelib.Controllers", "Application\Animelib.Controllers\Animelib.Controllers.csproj", "{357E0360-DC0D-40BC-BFCD-9621DE6EAD39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{357E0360-DC0D-40BC-BFCD-9621DE6EAD39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357E0360-DC0D-40BC-BFCD-9621DE6EAD39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357E0360-DC0D-40BC-BFCD-9621DE6EAD39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357E0360-DC0D-40BC-BFCD-9621DE6EAD39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{357E0360-DC0D-40BC-BFCD-9621DE6EAD39} = {ECBDF5A0-163C-4DEF-93FB-BFB2F6C3E32C}
+	EndGlobalSection
+EndGlobal
