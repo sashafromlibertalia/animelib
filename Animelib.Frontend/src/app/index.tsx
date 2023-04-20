@@ -1,11 +1,12 @@
-import "./index.scss";
 import { AdaptivityProvider, AppRoot, ConfigProvider } from "@vkontakte/vkui";
 import { RouterProvider } from "@app/providers";
 import { Suspense } from "react";
+import "@vkontakte/vkui/dist/vkui.css";
+import "./app.css";
 
 export const App = () => {
   return (
-    <ConfigProvider appearance={"dark"}>
+    <ConfigProvider platform={"vkcom"} appearance={"dark"}>
       <AdaptivityProvider>
         <AppRoot>
           <Suspense>

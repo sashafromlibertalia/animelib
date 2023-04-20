@@ -9,16 +9,16 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx src",
-    "stylelint": "stylelint src/**/*.scss",
     "eslint:fix": "eslint --ext .js,.jsx,.ts,.tsx src --fix",
-    "stylelint:fix": "stylelint src/**/*.scss --fix",
-    "cs:fix": "yarn eslint:fix && yarn stylelint:fix"
+    "cs:fix": "yarn eslint:fix"
   },
   "engines": {
     "node": ">=18",
     "yarn": "^1.22"
   },
   "dependencies": {
+    "@farfetched/core": "^0.8.10",
+    "@vanilla-extract/css": "^1.11.0",
     "@vkontakte/icons": "^2.28.0",
     "@vkontakte/vk-bridge": "^2.7.2",
     "@vkontakte/vkui": "^5.3.1",
@@ -35,11 +35,11 @@
   },
   "devDependencies": {
     "@builtbysasha/eslint-config": "^1.0.0",
-    "@builtbysasha/stylelint": "^1.0.11",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.59.0",
+    "@vanilla-extract/vite-plugin": "^3.8.0",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "eslint": "^8.0.1",
     "stylelint": "^15.5.0",

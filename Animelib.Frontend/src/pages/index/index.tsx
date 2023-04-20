@@ -1,8 +1,10 @@
+import { AppLayout } from "@widgets/app-layout";
+
 const IndexPage = () => {
   return (
-    <div>
+    <AppLayout>
       <h1>Index page</h1>
-    </div>
+    </AppLayout>
   );
 };
 
