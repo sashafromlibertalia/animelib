@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "eslint:fix": "eslint --ext .js,.jsx,.ts,.tsx src --fix",
-    "cs:fix": "yarn eslint:fix"
+    "cs:fix": "yarn eslint:fix",
+    "prepare": "cd .. && husky install Animelib.Frontend/.husky"
   },
   "engines": {
     "node": ">=18",
@@ -42,6 +43,7 @@
     "@vanilla-extract/vite-plugin": "^3.8.0",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "eslint": "^8.0.1",
+    "husky": "^8.0.3",
     "stylelint": "^15.5.0",
     "typescript": "*",
     "vite": "^4.2.0",
