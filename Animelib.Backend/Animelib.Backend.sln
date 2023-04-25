@@ -2,9 +2,11 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{ECBDF5A0-163C-4DEF-93FB-BFB2F6C3E32C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animelib.Controllers", "Presentation\Animelib.Controllers\Animelib.Controllers.csproj", "{7FB21477-01EE-4300-B34D-CB66EF4B6067}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animelib.WebApi", "Presentation\Animelib.WebApi\Animelib.WebApi.csproj", "{7FB21477-01EE-4300-B34D-CB66EF4B6067}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animelib.UnitTests", "Animelib.UnitTests\Animelib.UnitTests.csproj", "{B2E9DA86-9F1E-44EB-A3C0-B303F7B167E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animelib.Controllers", "Presentation\Animelib.Controllers\Animelib.Controllers.csproj", "{7B760EB8-BCDD-4142-9486-A8B47512B4B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,8 +22,13 @@ Global
 		{B2E9DA86-9F1E-44EB-A3C0-B303F7B167E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2E9DA86-9F1E-44EB-A3C0-B303F7B167E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2E9DA86-9F1E-44EB-A3C0-B303F7B167E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B760EB8-BCDD-4142-9486-A8B47512B4B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B760EB8-BCDD-4142-9486-A8B47512B4B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B760EB8-BCDD-4142-9486-A8B47512B4B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B760EB8-BCDD-4142-9486-A8B47512B4B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7FB21477-01EE-4300-B34D-CB66EF4B6067} = {ECBDF5A0-163C-4DEF-93FB-BFB2F6C3E32C}
+		{7B760EB8-BCDD-4142-9486-A8B47512B4B6} = {ECBDF5A0-163C-4DEF-93FB-BFB2F6C3E32C}
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,12 @@
+using Animelib.Controllers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
+builder.Services.AddMvc()
+    .AddApplicationPart(typeof(IControllerProjectMarker).Assembly)
+    .AddControllersAsServices();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
