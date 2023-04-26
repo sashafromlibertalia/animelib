@@ -1,14 +1,10 @@
-using Animelib.Controllers;
+using Animelib.Controllers.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
-builder.Services.AddRouting(options => options.LowercaseUrls = true);
-builder.Services.AddMvc()
-    .AddApplicationPart(typeof(IControllerProjectMarker).Assembly)
-    .AddControllersAsServices();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services
+    .AddApiControllers()
+    .AddValidation();
 
 var app = builder.Build();
 
@@ -21,5 +17,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
+app.UseCors(o => o.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 
 app.Run();
