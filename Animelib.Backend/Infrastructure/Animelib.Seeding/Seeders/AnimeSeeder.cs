@@ -1,4 +1,6 @@
 using Animelib.DataAccess.Abstractions;
+using Animelib.Seeding.Dto;
+using Newtonsoft.Json.Linq;
 
 namespace Animelib.Seeding.Seeders;
 
@@ -17,7 +19,7 @@ public class AnimeSeeder : IDatabaseSeeder
         {
             var responseMessage = await _httpClient.GetAsync("https://kitsu.io/api/edge/anime/1");
             var response = await responseMessage.Content.ReadAsStringAsync();
-            Console.WriteLine(response);
+            var anime = JObject.Parse(response)["data"]?.ToObject<AnimeSeedResponseDto>();
         }
         catch (Exception e)
         {
