@@ -11,7 +11,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Application\Animelib.DataAccess.Abstractions\Animelib.DataAccess.Abstractions.csproj" />
       <ProjectReference Include="..\..\Domain\Animelib.Core\Animelib.Core.csproj" />
     </ItemGroup>
 

@@ -1,4 +1,5 @@
 using Animelib.Common.Validators;
+using Animelib.Seeding.Extensions;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 
@@ -25,5 +26,13 @@ public static class ServiceCollectionsExtensions
             .AddValidatorsFromAssemblyContaining<IValidatorAssemblyMarker>();
 
         return collection;
+    }
+    
+    public static async Task ApplySeeders(this IServiceCollection collection)
+    {
+        collection.AddSeeding();
+
+        var provider = collection.BuildServiceProvider();
+        await provider.UseDatabaseSeeders();
     }
 }

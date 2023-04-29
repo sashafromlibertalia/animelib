@@ -1,10 +1,16 @@
 using Animelib.Controllers.Extensions;
+using Animelib.DataAccess.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
     .AddApiControllers()
-    .AddValidation();
+    .AddValidation()
+    .AddDatabaseContext(o => 
+        o.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+await builder.Services.ApplySeeders();
 
 var app = builder.Build();
 

@@ -2,14 +2,26 @@
 
 namespace Animelib.Core.Animes;
 
-public partial record Anime
-(
-    int Id,
-    string Title,
-    string Slug,
-    string Description,
-    string PosterUrl,
-    string CoverUrl,
-    bool IsFinished,
-    int EpisodesAmount
-) : IEntity<int>;
+public partial class Anime : IEntity<int>
+{
+    public Anime(int id, string title, string slug, string description, string posterUrl, string coverUrl, bool isFinished, int episodesAmount)
+    {
+        Id = id;
+        Title = title;
+        Slug = slug;
+        Description = description;
+        PosterUrl = posterUrl;
+        CoverUrl = coverUrl;
+        IsFinished = isFinished;
+        EpisodesAmount = episodesAmount;
+    }
+    
+    public int Id { get;  }
+    public string Title { get; }
+    public string Slug { get; }
+    public string Description { get; }
+    public string PosterUrl { get; }
+    public string CoverUrl { get; }
+    public bool IsFinished { get; }
+    public int EpisodesAmount { get; }
+}
