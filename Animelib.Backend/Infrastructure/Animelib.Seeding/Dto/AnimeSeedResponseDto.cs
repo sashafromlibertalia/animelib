@@ -1,15 +1,25 @@
 namespace Animelib.Seeding.Dto;
 
-public record struct AnimeSeedResponseAttributesDto
+public readonly record struct AnimeSeedResponsePosterImageDto
+(
+    string Medium
+);
+
+public readonly record struct AnimeSeedResponseCoverImagerDto
+(
+    string Large
+);
+
+public readonly record struct AnimeSeedResponseAttributesDto
 (
     string Description,
     string Slug,
-    AnimeSeedResponsePosterImageDto PosterImage
-);
-
-public record struct AnimeSeedResponsePosterImageDto
-(
-    string Medium
+    string CanonicalTitle,
+    int? EpisodeCount,
+    string Status,
+    float AverageRating,
+    AnimeSeedResponsePosterImageDto? PosterImage,
+    AnimeSeedResponseCoverImagerDto? CoverImage
 );
 
 public record AnimeSeedResponseDto

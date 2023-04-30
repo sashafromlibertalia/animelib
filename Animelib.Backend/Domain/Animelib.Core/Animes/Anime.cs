@@ -4,7 +4,8 @@ namespace Animelib.Core.Animes;
 
 public partial class Anime : IEntity<int>
 {
-    public Anime(int id, string title, string slug, string description, string posterUrl, string coverUrl, bool isFinished, int episodesAmount)
+    public Anime(int id, string title, string slug, string description, string? posterUrl, string? coverUrl,
+        string status, int? episodesCount, float rating)
     {
         Id = id;
         Title = title;
@@ -12,16 +13,18 @@ public partial class Anime : IEntity<int>
         Description = description;
         PosterUrl = posterUrl;
         CoverUrl = coverUrl;
-        IsFinished = isFinished;
-        EpisodesAmount = episodesAmount;
+        Status = status;
+        EpisodeCount = episodesCount;
+        Rating = rating;
     }
-    
-    public int Id { get;  }
-    public string Title { get; }
-    public string Slug { get; }
-    public string Description { get; }
-    public string PosterUrl { get; }
-    public string CoverUrl { get; }
-    public bool IsFinished { get; }
-    public int EpisodesAmount { get; }
+
+    public int Id { get; init; }
+    public string Title { get; init; }
+    public string Slug { get; init; }
+    public string Description { get; init; }
+    public string? PosterUrl { get; init; }
+    public string? CoverUrl { get; init; }
+    public string Status { get; init; }
+    public int? EpisodeCount { get; init; }
+    public float Rating { get; init; }
 }

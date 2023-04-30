@@ -19,16 +19,13 @@ public class AnimeValidator : AbstractValidator<Anime>
         RuleFor(anime => anime.Title)
             .NotEmpty().NotNull().WithMessage("Title can't be null or empty");
 
-        RuleFor(anime => anime.EpisodesAmount)
+        RuleFor(anime => anime.EpisodeCount)
             .NotEmpty().GreaterThanOrEqualTo(0).WithMessage("Episodes can't be a negative number");
 
-        RuleFor(anime => anime.CoverUrl)
-            .NotEmpty().NotNull().WithMessage("Cover URL can't empty or null");
+        RuleFor(anime => anime.Status)
+            .NotEmpty().NotNull().WithMessage("Status can't empty or null");
 
-        RuleFor(anime => anime.PosterUrl)
-            .NotNull().NotEmpty().WithMessage("Poster URL can't empty or null");
-
-        RuleFor(anime => anime.IsFinished)
-            .NotNull();
+        RuleFor(anime => anime.Rating)
+            .NotEmpty().GreaterThanOrEqualTo(0).WithMessage("Rating can't be a negative number");
     }
 }

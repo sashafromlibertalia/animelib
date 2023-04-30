@@ -7,6 +7,5 @@ namespace Animelib.DataAccess.Abstractions;
 public interface IDatabaseContext
 {
     DbSet<Anime> Animes { get; }
-    DbSet<User> Users { get; }
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

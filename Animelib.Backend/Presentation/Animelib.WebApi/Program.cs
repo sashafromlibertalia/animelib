@@ -8,7 +8,7 @@ builder.Services
     .AddApiControllers()
     .AddValidation()
     .AddDatabaseContext(o => 
-        o.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+        o.UseSqlite("Data Source=animelib.db"));
 
 await builder.Services.ApplySeeders();
 
