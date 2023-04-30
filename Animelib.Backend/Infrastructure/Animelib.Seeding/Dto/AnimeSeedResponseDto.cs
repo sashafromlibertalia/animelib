@@ -18,6 +18,7 @@ public readonly record struct AnimeSeedResponseAttributesDto
     int? EpisodeCount,
     string Status,
     float AverageRating,
+    string Subtype,
     AnimeSeedResponsePosterImageDto? PosterImage,
     AnimeSeedResponseCoverImagerDto? CoverImage
 );

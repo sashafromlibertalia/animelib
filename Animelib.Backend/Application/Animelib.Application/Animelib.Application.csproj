@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Animelib.Services</RootNamespace>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Domain\Animelib.Common\Animelib.Common.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Animelib.Mappings\Animelib.Mappings.csproj" />
+      <ProjectReference Include="..\Animelib.DataAccess.Abstractions\Animelib.DataAccess.Abstractions.csproj" />
+      <ProjectReference Include="..\Animelib.Dto\Animelib.Dto.csproj" />
+    </ItemGroup>
+
+</Project>

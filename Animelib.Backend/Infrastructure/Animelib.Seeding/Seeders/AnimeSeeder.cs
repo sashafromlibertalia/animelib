@@ -6,7 +6,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Animelib.Seeding.Seeders;
 
-public class AnimeSeeder : IDatabaseSeeder
+public class AnimeSeeder : IDatabaseSeeder, IDisposable
 {
     private readonly HttpClient _httpClient;
     private const string BaseUrl = "https://kitsu.io/api/edge/anime";
@@ -37,7 +37,7 @@ public class AnimeSeeder : IDatabaseSeeder
                     var entity = new Anime(anime.Id, anime.Attributes.CanonicalTitle, anime.Attributes.Slug,
                         anime.Attributes.Description, anime.Attributes.PosterImage?.Medium,
                         anime.Attributes.CoverImage?.Large, anime.Attributes.Status, anime.Attributes.EpisodeCount,
-                        anime.Attributes.AverageRating);
+                        anime.Attributes.AverageRating, anime.Attributes.Subtype);
 
                     var validator = new AnimeValidator();
                     var result = await validator.ValidateAsync(entity);
@@ -53,5 +53,10 @@ public class AnimeSeeder : IDatabaseSeeder
                 throw;
             }
         }
+    }
+
+    public void Dispose()
+    {
+        _httpClient.Dispose();
     }
 }

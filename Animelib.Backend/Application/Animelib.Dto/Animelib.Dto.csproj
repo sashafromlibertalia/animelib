@@ -7,12 +7,4 @@
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     </PropertyGroup>
 
-    <ItemGroup>
-      <PackageReference Include="FluentValidation" Version="11.5.2" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Animelib.Core\Animelib.Core.csproj" />
-    </ItemGroup>
-
 </Project>

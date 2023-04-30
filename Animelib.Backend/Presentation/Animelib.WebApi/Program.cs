@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services
     .AddApiControllers()
     .AddValidation()
+    .AddExceptionFilters()
+    .AddDtoConfiguration()
     .AddDatabaseContext(o => 
         o.UseSqlite("Data Source=animelib.db"));
 

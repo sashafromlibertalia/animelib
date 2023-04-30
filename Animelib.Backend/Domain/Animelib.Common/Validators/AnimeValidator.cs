@@ -27,5 +27,8 @@ public class AnimeValidator : AbstractValidator<Anime>
 
         RuleFor(anime => anime.Rating)
             .NotEmpty().GreaterThanOrEqualTo(0).WithMessage("Rating can't be a negative number");
+        
+        RuleFor(anime => anime.Subtype)
+            .NotEmpty().NotNull().WithMessage("Subtype can't be empty or null");
     }
 }
