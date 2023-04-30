@@ -5,11 +5,16 @@ import {
 import { lazy } from "react";
 
 const IndexPage = lazy(() => import("@pages/index"));
+const AnimePage = lazy(() => import("@pages/anime"));
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <IndexPage />,
+  },
+  {
+    path: "/anime/:slug",
+    element: <AnimePage />,
   },
 ]);
 

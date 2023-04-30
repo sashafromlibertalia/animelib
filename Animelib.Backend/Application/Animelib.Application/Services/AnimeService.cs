@@ -17,15 +17,17 @@ public class AnimeService : IAnimeService
         _context = context;
     }
 
-    public Task<IEnumerable<AnimeDto>> GetAnimesAsync(int page, int take)
+    public Task<AnimeListDto> GetAnimesAsync(int page, int take)
     {
+        var total = _context.Animes.Count();
+        
         var animes = _context.Animes
             .Skip((page - 1) * take)
             .Take(take)
             .AsEnumerable()
             .Select(x => x.ToDto());
         
-        return Task.FromResult(animes);
+        return Task.FromResult(new AnimeListDto(animes, total));
     }
 
     public async Task<AnimeDto> GetAnimeByIdAsync(int id)

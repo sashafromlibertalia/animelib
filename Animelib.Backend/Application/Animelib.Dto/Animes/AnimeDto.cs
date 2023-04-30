@@ -9,5 +9,6 @@ public record AnimeDto
     string? CoverUrl,
     string Status, 
     int? EpisodesCount,
-    float Rating
+    float Rating,
+    string Subtype
 );

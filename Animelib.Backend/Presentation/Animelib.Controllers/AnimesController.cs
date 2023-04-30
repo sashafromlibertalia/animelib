@@ -21,7 +21,7 @@ public class AnimesController : ControllerBase
     /// <summary>Returns list of animes</summary>
     [HttpGet]
     [ProducesResponseType(typeof(IEnumerable<AnimeDto>), StatusCodes.Status200OK)]
-    public async Task<ActionResult<IEnumerable<AnimeDto>>> GetMany(
+    public async Task<ActionResult<AnimeListDto>> GetMany(
         [FromQuery(Name = "page")] int page = 1,
         [FromQuery(Name = "take")] int take = PaginationTake
     )

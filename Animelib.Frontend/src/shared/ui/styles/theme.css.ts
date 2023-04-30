@@ -1,35 +1,36 @@
-import { createGlobalTheme } from "@vanilla-extract/css";
-
-export const breakpoints: Record<string, number> = {
+export const breakpoints = Object.freeze({
   sm: 576,
   md: 768,
   lg: 992,
   xl: 1200,
   xxl: 1400,
-};
+});
 
-export const vars = createGlobalTheme(":root", {
+export const vars = Object.freeze({
   font: {
     base: "'Mulish', sans-serif",
     heading: "'IBM Plex Sans', sans-serif",
   },
   colors: {
     textIcons: {
-      accentBlue: {
-        normal: "#397DCC",
-        hover: "#4182CE",
+      accent: {
+        normal: "#7f85f5",
+        hover: "#4f52b2",
       },
       tertiary: {
         normal: "#656565",
       },
     },
     bgStroke: {
-      paleBlack: {
-        normal: "#191919",
-      },
+      base: "#141414",
+      secondary: "#1c1c1e",
     },
   },
   transitions: {
-    base: "all 150ms ease-in-out",
+    base: {
+      duration: "150ms",
+      timingFunction: "ease-in-out",
+      complete: "all 150ms ease-in-out",
+    },
   },
 });

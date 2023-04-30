@@ -15,7 +15,8 @@ public static class AnimeMapping
             anime.CoverUrl,
             anime.Status,
             anime.EpisodeCount,
-            anime.Rating
+            anime.Rating,
+            anime.Subtype
         );
     }
 }

@@ -1,19 +1,26 @@
-import { AdaptivityProvider, AppRoot, ConfigProvider } from "@vkontakte/vkui";
 import { RouterProvider } from "@app/providers";
-import { Suspense } from "react";
-import "@vkontakte/vkui/dist/vkui.css";
-import "./app.css";
+import { FluentProvider, makeStyles, teamsDarkTheme } from "@fluentui/react-components";
+import "./styles";
+import ErrorBoundary from "@pages/error-boundary";
+import { vars } from "@shared/ui/styles";
+import { useStaticStyles } from "@app/styles";
+
+export const useProviderStyles = makeStyles({
+  provider: {
+    fontFamily: vars.font.base,
+    backgroundColor: "inherit",
+  },
+});
 
 export const App = () => {
+  const styles = useProviderStyles();
+  useStaticStyles();
+
   return (
-    <ConfigProvider platform={"vkcom"} appearance={"dark"}>
-      <AdaptivityProvider>
-        <AppRoot>
-          <Suspense>
-            <RouterProvider />
-          </Suspense>
-        </AppRoot>
-      </AdaptivityProvider>
-    </ConfigProvider>
+    <ErrorBoundary>
+      <FluentProvider className={styles.provider} theme={teamsDarkTheme}>
+        <RouterProvider />
+      </FluentProvider>
+    </ErrorBoundary>
   );
 };
