@@ -1,6 +1,6 @@
 import React from "react";
 import { useList, useUnit } from "effector-react";
-import { animeModel } from "@/entities/anime";
+import { animeModel } from "@entities/anime";
 import { Caption1, Card, CardHeader, Spinner, Subtitle2 } from "@fluentui/react-components";
 import { useCarsStyles } from "./card-list.css";
 
@@ -10,7 +10,7 @@ export const AnimeCardList = () => {
   const styles = useCarsStyles();
   const isPending = useUnit(animeModel.effects.fetchAllAnimeFx.pending);
 
-  const data = useList(animeModel.$anime, (anime) => {
+  const data = useList(animeModel.$allAnime, (anime) => {
     return (
       <Card className={styles.card}>
         <a key={anime.slug} href={`/anime/${anime.slug}`}>

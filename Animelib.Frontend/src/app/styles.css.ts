@@ -11,7 +11,6 @@ export const useStaticStyles = makeStaticStyles({
   body: {
     lineHeight: 1.5,
     scrollBehavior: "smooth",
-    fontFamily: `${vars.font.base} !important`,
     backgroundColor: vars.colors.bgStroke.base,
   },
   a: {

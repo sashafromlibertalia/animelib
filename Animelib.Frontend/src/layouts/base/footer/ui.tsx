@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Container>
-        Сделано с любовью на&nbsp;
+        Built with 💜 and&nbsp;
         <a href={"https://react.fluentui.dev/"} target={"_blank"} rel="noreferrer">
           FluentUI
         </a>

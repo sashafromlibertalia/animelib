@@ -7,10 +7,6 @@ export const breakpoints = Object.freeze({
 });
 
 export const vars = Object.freeze({
-  font: {
-    base: "'Mulish', sans-serif",
-    heading: "'IBM Plex Sans', sans-serif",
-  },
   colors: {
     textIcons: {
       accent: {
@@ -23,7 +19,7 @@ export const vars = Object.freeze({
     },
     bgStroke: {
       base: "#141414",
-      secondary: "#1c1c1e",
+      secondary: "#202021",
     },
   },
   transitions: {

@@ -1,7 +1,7 @@
 import { api } from "@shared/config";
 import { AxiosResponse } from "axios";
 
-const getAllAnimesAsync = async (page: number = 1, take: number = 20): Promise<AxiosResponse> => {
+const getAllAnimeAsync = async (page: number = 1, take: number = 20): Promise<AxiosResponse> => {
   return api.get("animes", {
     params: {
       page,
@@ -10,6 +10,11 @@ const getAllAnimesAsync = async (page: number = 1, take: number = 20): Promise<A
   });
 };
 
+const getAnimeBySlugAsync = async (slug: string): Promise<AxiosResponse> => {
+  return api.get(`animes/${slug}`);
+};
+
 export {
-  getAllAnimesAsync,
+  getAllAnimeAsync,
+  getAnimeBySlugAsync,
 };

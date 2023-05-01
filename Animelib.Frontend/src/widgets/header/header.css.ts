@@ -1,9 +1,9 @@
-import { makeStyles, shorthands } from "@fluentui/react-components";
+import { makeStyles, shorthands, tokens } from "@fluentui/react-components";
 import { vars } from "@shared/ui/styles";
 
 export const useHeaderStyles = makeStyles({
   header: {
-    ...shorthands.borderRadius("0"),
+    ...shorthands.borderRadius(tokens.borderRadiusNone),
     ...shorthands.padding("8px", "0"),
     backgroundColor: vars.colors.bgStroke.secondary,
   },

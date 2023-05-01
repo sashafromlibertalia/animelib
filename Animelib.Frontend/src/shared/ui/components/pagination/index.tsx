@@ -1,6 +1,5 @@
 import React, { forwardRef } from "react";
-import { Button, makeStyles, shorthands } from "@fluentui/react-components";
-import { vars } from "@shared/ui/styles";
+import { Button, makeStyles, shorthands, tokens } from "@fluentui/react-components";
 
 type PaginationProps = {
   total: number;
@@ -14,12 +13,11 @@ const usePaginationStyles = makeStyles({
     ...shorthands.gap("8px"),
     alignItems: "center",
     flexWrap: "wrap",
-    marginTop: "24px",
+    marginTop: tokens.spacingVerticalXXL,
   },
   page: {
     minWidth: "unset",
     display: "flex",
-    fontFamily: vars.font.base,
     alignItems: "center",
     justifyContent: "center",
   },

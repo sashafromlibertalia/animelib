@@ -1,11 +1,11 @@
-import { makeStyles, shorthands } from "@fluentui/react-components";
+import { makeStyles, shorthands, tokens } from "@fluentui/react-components";
 import { breakpoints, vars } from "@shared/ui/styles";
 
 export const useCarsStyles = makeStyles({
   card: {
     ...shorthands.transition("border", vars.transitions.base.duration, vars.transitions.base.timingFunction),
     ...shorthands.padding("0.5rem"),
-    ...shorthands.border("2px", "solid", "transparent"),
+    ...shorthands.border(tokens.strokeWidthThick, "solid", "transparent"),
     [`@media (max-width: ${breakpoints.sm}px)`]: {
       width: "100%",
     },
@@ -13,18 +13,20 @@ export const useCarsStyles = makeStyles({
       color: vars.colors.textIcons.accent.normal,
     },
     "&:hover": {
-      ...shorthands.border("2px", "solid", vars.colors.textIcons.accent.hover),
+      ...shorthands.border(tokens.strokeWidthThick, "solid", vars.colors.textIcons.accent.hover),
     },
   },
   subtitle: {
-    fontFamily: vars.font.heading,
-    marginTop: ".25rem",
+    marginTop: tokens.spacingVerticalXS,
     display: "inline-block",
   },
   list: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
-    ...shorthands.gap("1rem"),
+    ...shorthands.gap(tokens.spacingHorizontalL),
+    [`@media (max-width: ${breakpoints.sm}px)`]: {
+      gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))",
+    },
   },
   caption: {
     textTransform: "capitalize",
@@ -32,5 +34,6 @@ export const useCarsStyles = makeStyles({
   image: {
     width: "100%",
     objectFit: "cover",
+    ...shorthands.borderRadius(tokens.borderRadiusMedium),
   },
 });
