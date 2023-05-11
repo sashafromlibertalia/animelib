@@ -1,1 +1,1 @@
-export * from "./with-routes";
+export * from "./routes";

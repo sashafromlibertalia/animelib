@@ -1,4 +1,4 @@
-import { RouterProvider } from "@app/providers";
+import { RouterDOMProvider } from "@app/providers";
 import { FluentProvider, makeStyles, Spinner, teamsDarkTheme, Theme } from "@fluentui/react-components";
 import "./styles.css";
 import { useStaticStyles } from "@app/styles.css";
@@ -23,7 +23,7 @@ export const App = () => {
   return (
     <Suspense fallback={<Spinner size={"large"} />}>
       <FluentProvider className={styles.provider} theme={customTheme}>
-        <RouterProvider />
+        <RouterDOMProvider />
       </FluentProvider>
     </Suspense>
   );

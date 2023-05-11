@@ -26,12 +26,14 @@ export const Header = () => {
             </picture>
           </a>
 
-          <div>
+          <section>
             <a href={"https://github.com/sashafromlibertalia/animelib"} target={"_blank"} rel="noreferrer">
               <Button appearance={"transparent"}>GitHub</Button>
             </a>
-            <Avatar name="Александр Мирошниченко" />
-          </div>
+            <a href={"/user/1"}>
+              <Avatar name="Александр Мирошниченко" />
+            </a>
+          </section>
         </Container>
       </div>
     </nav>

@@ -14,6 +14,7 @@ import {
 import { Icon16StarCircleFillYellow } from "@vkontakte/icons";
 import { useAnimeExplorerStyles } from "@widgets/anime/explorer/ui/styles.css";
 import { Anime } from "@shared/api/anime";
+import { CreateCommentForm } from "@features/user/create-comment";
 
 type AnimeExplorerProps = {
   anime: Anime,
@@ -29,20 +30,20 @@ export const AnimeExplorer: FC<AnimeExplorerProps> = (props) => {
   const [tab, setTab] = useState<Tabs>("info");
 
   const InfoTab = memo(() => (
-    <div>
+    <section className={styles.tab}>
       <Body2>
         {anime?.description}
       </Body2>
-    </div>
+    </section>
   ));
   InfoTab.displayName = "InfoTab";
 
   const CommentsTab = memo(() => (
-    <div>
-      <Body1>
-        Comments
-      </Body1>
-    </div>
+    <section className={styles.tab}>
+      <CreateCommentForm />
+
+      <Divider className={styles.divider} />
+    </section>
   ));
   CommentsTab.displayName = "CommentsTab";
 

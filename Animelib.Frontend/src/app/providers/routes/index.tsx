@@ -1,15 +1,16 @@
 import {
   createBrowserRouter,
-  RouterProvider as RouterDOMProvider,
+  RouterProvider,
 } from "react-router-dom";
-import React, { lazy } from "react";
+import { lazy } from "react";
 import { animeModel } from "@entities/anime";
 
 const IndexPage = lazy(() => import("@pages/index"));
 const AnimePage = lazy(() => import("@pages/anime"));
-const Error404Page = lazy(() => import("@pages/errors/404"));
+const Error404Page = lazy(() => import("@pages/404"));
 const LoginPage = lazy(() => import("@pages/auth/login"));
 const SignupPage = lazy(() => import("@pages/auth/signup"));
+const UserPage = lazy(() => import("@pages/user"));
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
     element: <AnimePage />,
   },
   {
+    path: "/user/:id",
+    errorElement: <Error404Page />,
+    element: <UserPage />,
+  },
+  {
     path: "auth/login",
     element: <LoginPage />,
   },
@@ -41,6 +47,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-export const RouterProvider = () => {
-  return <RouterDOMProvider router={router} />;
+export const RouterDOMProvider = () => {
+  return <RouterProvider router={router} />;
 };

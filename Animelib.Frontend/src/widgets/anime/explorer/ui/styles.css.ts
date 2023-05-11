@@ -32,9 +32,15 @@ export const useAnimeExplorerStyles = makeStyles({
     width: "250px",
     ...shorthands.borderRadius(tokens.borderRadiusMedium),
   },
+  tab: {
+    width: "100%",
+  },
   tabsContainer: {
     marginTop: tokens.spacingVerticalL,
     width: "100%",
     ...shorthands.padding("0", "1rem", "1rem"),
+  },
+  divider: {
+    ...shorthands.margin(tokens.spacingVerticalM, 0),
   },
 });
