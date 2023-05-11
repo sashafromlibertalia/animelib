@@ -12,8 +12,8 @@
 > Originally this project contained only UML diagrams as a laboratory work at my university. I created [deployment](Docs/System%20Deployment%20Diagram.jpg), [activity](Docs/Upload%20new%20movie%20Activity%20Diagram.jpg) and [class](Docs/Project%20Domain%20Model.jpg) diagrams. But I decided to create a fully-working application to practice C# and try new technlogies on frontend. This application **doesn't match** the diagrams.
 
 
-## App features
+### App features
 
-## License
+### License
 
 This project has a [MIT](LICENSE) license.
