@@ -3,12 +3,8 @@
 <p align="center">
   Web application for browsing anime built with React and <a href="https://github.com/microsoft/fluentui">FluentUI</a>. 
   <br/>
-  Inspired by a <a href="https://animelib.me/" target="_blank">real animelib</a>.
+  Inspired by an <a href="https://animelib.me/" target="_blank">original animelib</a>.
 <p/>
-
-<span>
-  <img src="https://img.shields.io/badge/license-MIT-brightgreen" alt="license"/>
-</span>
 
 
 ### Motivation
@@ -18,6 +14,13 @@
 
 ### App features
 
+- Uses [clean architecture](https://github.com/jasontaylordev/CleanArchitecture/tree/main) on backend and [feature-sliced design](https://feature-sliced.design/) on frontend
+- Authentication and authorization via [Auth0](https://auth0.com/)
+- Database seeding via [Kitsu API](https://kitsu.docs.apiary.io/#)
+- Anime bookmarking
+- Fully responsive layout
+- Real-time comment creation via [SignalR](https://learn.microsoft.com/en-us/aspnet/core/signalr/introduction?view=aspnetcore-7.0)
+  
 ### License
 
 This project has a [MIT](LICENSE) license.
