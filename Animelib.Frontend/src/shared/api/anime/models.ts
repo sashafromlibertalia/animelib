@@ -4,22 +4,13 @@ export type Anime = {
   slug: string;
   posterUrl: string;
   coverUrl: string;
-  subtype: AnimeTypesEnum;
+  subtype: string;
   rating: number;
   status: string;
   episodesCount: number;
 };
 
-export type AnimeResponse = {
+export type ApiAnime = {
   data: Anime[];
   total: number;
 };
-
-export const enum AnimeTypesEnum {
-  Ona = "ONA",
-  Ova = "OVA",
-  Tv = "TV",
-  MOVIE = "movie",
-  Music = "music",
-  Special = "special",
-}

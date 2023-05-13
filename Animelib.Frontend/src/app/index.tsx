@@ -1,8 +1,8 @@
 import { RouterDOMProvider } from "@app/providers";
 import { FluentProvider, makeStyles, Spinner, teamsDarkTheme, Theme } from "@fluentui/react-components";
-import "./styles.css";
-import { useStaticStyles } from "@app/styles.css";
-import { vars } from "@shared/ui/styles";
+import "./index.css";
+import { useStaticStyles } from "@app/index.css";
+import { vars } from "@shared";
 import { Suspense } from "react";
 
 export const useProviderStyles = makeStyles({

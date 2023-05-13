@@ -1,4 +1,4 @@
-import { AppLayout } from "@layouts";
+import { AppLayout } from "@shared";
 import { Body1, Button, Card, CardHeader, Divider, Field, Input, Subtitle2 } from "@fluentui/react-components";
 import { useLoginStyles } from "@pages/auth/login/login.css";
 

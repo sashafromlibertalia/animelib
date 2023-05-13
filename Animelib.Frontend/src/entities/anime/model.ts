@@ -1,8 +1,8 @@
-import { Anime, AnimeResponse, getAllAnimeAsync, getAnimeBySlugAsync } from "@shared/api/anime";
+import { Anime, ApiAnime, getAllAnimeAsync, getAnimeBySlugAsync } from "@shared/api/anime";
 import { createEffect, createEvent, createStore, sample } from "effector";
 import { useUnit } from "effector-react";
 
-const fetchAllAnimeFx = createEffect<number, AnimeResponse>(async (page = 1) => {
+const fetchAllAnimeFx = createEffect<number, ApiAnime>(async (page = 1) => {
   const { data } = await getAllAnimeAsync(page);
   return data;
 });
@@ -46,7 +46,6 @@ const useTotalAnimePages = (): number => {
 const useActiveAnime = (): Anime | null => {
   return useUnit($activeAnime);
 };
-
 
 export const events = {
   changeAnimePage,

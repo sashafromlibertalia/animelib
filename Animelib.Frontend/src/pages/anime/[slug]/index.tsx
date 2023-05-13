@@ -1,4 +1,4 @@
-import { AppLayout } from "@layouts";
+import { AppLayout } from "@shared";
 import React from "react";
 import { animeModel } from "@entities/anime";
 import { useUnit } from "effector-react";
@@ -6,7 +6,7 @@ import {
   Body1,
   Spinner,
 } from "@fluentui/react-components";
-import { useAnimeStyles } from "@pages/anime/anime.css";
+import { useAnimeStyles } from "@pages/anime/[slug]/anime.css";
 import { AnimeExplorer } from "@widgets/anime/explorer";
 
 const AnimePage = () => {

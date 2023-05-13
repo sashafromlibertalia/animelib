@@ -1,4 +1,4 @@
-import { AppLayout } from "@layouts";
+import { AppLayout } from "@shared";
 import { Body1Strong } from "@fluentui/react-components";
 
 const Error404Page = () => <AppLayout>

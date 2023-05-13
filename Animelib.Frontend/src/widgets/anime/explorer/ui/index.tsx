@@ -11,10 +11,14 @@ import {
   TabList,
   Title1,
 } from "@fluentui/react-components";
-import { Icon16StarCircleFillYellow } from "@vkontakte/icons";
+import {
+  CommentMultiple16Regular,
+  Info24Regular, PeopleStar48Filled,
+} from "@fluentui/react-icons";
 import { useAnimeExplorerStyles } from "@widgets/anime/explorer/ui/styles.css";
 import { Anime } from "@shared/api/anime";
 import { CreateCommentForm } from "@features/user/create-comment";
+import { AddAnimeToList } from "@features/user/add-anime-to-list";
 
 type AnimeExplorerProps = {
   anime: Anime,
@@ -54,6 +58,9 @@ export const AnimeExplorer: FC<AnimeExplorerProps> = (props) => {
     )}>
       <aside className={styles.aside}>
         <img className={styles.poster} src={anime?.posterUrl} alt={"poster"} />
+
+        <AddAnimeToList />
+
         <Card>
           <section className={styles.asideMeta}>
             <Subtitle2>Type</Subtitle2>
@@ -76,14 +83,14 @@ export const AnimeExplorer: FC<AnimeExplorerProps> = (props) => {
         <section>
           <Title1>{anime?.title}</Title1>
           <span className={styles.ratingContainer}>
-            <Icon16StarCircleFillYellow width={24} height={24} />
+            <PeopleStar48Filled className={styles.ratingIcon} />
             <Subtitle2Stronger>{anime?.rating}</Subtitle2Stronger>
           </span>
         </section>
         <Card className={styles.tabsContainer}>
           <TabList defaultSelectedValue={tab} onTabSelect={(_, data) => setTab(data.value as Tabs)}>
-            <Tab value={"info"}>Information</Tab>
-            <Tab value={"comments"}>Comments</Tab>
+            <Tab icon={<Info24Regular />} value={"info"}>Information</Tab>
+            <Tab icon={<CommentMultiple16Regular />} value={"comments"}>Comments</Tab>
           </TabList>
           {
             tab === "info" && <InfoTab />

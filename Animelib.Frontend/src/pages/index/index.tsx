@@ -1,6 +1,5 @@
-import { AppLayout } from "@layouts";
+import { AppLayout, Pagination } from "@shared";
 import { AnimeCardList, animeModel } from "@entities/anime";
-import { Pagination } from "@shared/ui/components";
 
 const IndexPage = () => {
   const activePage = animeModel.selectors.useAnimePage();

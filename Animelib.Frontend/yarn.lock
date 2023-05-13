@@ -480,7 +480,7 @@
     "@griffel/react" "^1.5.2"
     "@swc/helpers" "^0.4.14"
 
-"@fluentui/react-icons@^2.0.196":
+"@fluentui/react-icons@^2.0.196", "@fluentui/react-icons@^2.0.201":
   version "2.0.201"
   resolved "https://registry.yarnpkg.com/@fluentui/react-icons/-/react-icons-2.0.201.tgz#5a5f8b549652b5024443589f9676cd1fea24275e"
   integrity sha512-krQ8ZcKp5ONRTIjuN+Wf1Pl2UwqCmK3Bf0cbjm3IdCyX/HeFSUF2rT8ery6vToTAfFzmGQur7HSFzd6fPywnyA==
@@ -1083,13 +1083,6 @@
   dependencies:
     tslib "^2.4.0"
 
-"@swc/helpers@^0.5.0":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.1.tgz#e9031491aa3f26bfcc974a67f48bd456c8a5357a"
-  integrity sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==
-  dependencies:
-    tslib "^2.4.0"
-
 "@types/json-schema@^7.0.9":
   version "7.0.11"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.11.tgz#d421b6c527a3037f7c84433fd2c4229e016863d3"
@@ -1231,20 +1224,6 @@
   integrity sha512-Ycg+n2eyCOTpn/wRy+evVo859+hw7qCj9iaX5CMny6x1fx1Uoq0xBG+a98lFtwLNGfGEnpI0F26YigRuxCRkwg==
   dependencies:
     "@swc/core" "^1.3.42"
-
-"@vkontakte/icons-sprite@^1.0.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@vkontakte/icons-sprite/-/icons-sprite-1.1.1.tgz#04c7a6a1268be39f324de070d27b490f157d04dd"
-  integrity sha512-mZt34A0wK72+C0Jr0rtypuEFtfJO3qBFt9RQQC5lpBDTVGB+sMKmI8Vi+CYbq1kPO8Uv7GiPQxLv8+Ti7cT24g==
-  dependencies:
-    "@swc/helpers" "^0.5.0"
-
-"@vkontakte/icons@^2.31.0":
-  version "2.31.0"
-  resolved "https://registry.yarnpkg.com/@vkontakte/icons/-/icons-2.31.0.tgz#1b7f0d23da10120cac8d039501420aa237d5bf3f"
-  integrity sha512-Tk1wGIiJ18xjE4EdeQ8TXELUmqxct9wD4y3IQIFvUUF6bjMAR9FnQSGmYLvGaekNXhfg4XDe+HNlrKZBiHphPQ==
-  dependencies:
-    "@vkontakte/icons-sprite" "^1.0.1"
 
 acorn-jsx@^5.3.2:
   version "5.3.2"

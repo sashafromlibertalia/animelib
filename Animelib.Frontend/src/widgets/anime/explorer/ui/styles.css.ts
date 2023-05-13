@@ -1,5 +1,5 @@
 import { makeStyles, shorthands, tokens } from "@fluentui/react-components";
-import { breakpoints } from "@shared/ui/styles";
+import { breakpoints } from "@shared";
 
 export const useAnimeExplorerStyles = makeStyles({
   container: {
@@ -24,6 +24,11 @@ export const useAnimeExplorerStyles = makeStyles({
     alignItems: "center",
     marginTop: tokens.spacingVerticalS,
     ...shorthands.gap(tokens.spacingHorizontalS),
+  },
+  ratingIcon: {
+    width: "24px",
+    height: "24px",
+    color: tokens.colorPaletteYellowBackground3,
   },
   contentContainer: {
     width: "100%",

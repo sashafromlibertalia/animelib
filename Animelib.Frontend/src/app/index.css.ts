@@ -1,5 +1,5 @@
 import "@shared/ui/styles";
-import { vars } from "@shared/ui/styles";
+import { vars } from "@shared";
 import { makeStaticStyles } from "@fluentui/react-components";
 
 export const useStaticStyles = makeStaticStyles({

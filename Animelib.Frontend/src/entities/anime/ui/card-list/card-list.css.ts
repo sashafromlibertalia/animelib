@@ -1,5 +1,5 @@
 import { makeStyles, shorthands, tokens } from "@fluentui/react-components";
-import { breakpoints, vars } from "@shared/ui/styles";
+import { breakpoints, vars } from "@shared";
 
 export const useCarsStyles = makeStyles({
   card: {
