@@ -1,6 +1,10 @@
 <h1 align="center">animelib<h3/>
 
-<p align="center">  Web application for browsing animes built with React and <a href="https://github.com/microsoft/fluentui">FluentUI</a> <p/>
+<p align="center">
+  Web application for browsing anime built with React and <a href="https://github.com/microsoft/fluentui">FluentUI</a>. 
+  <br/>
+  Inspired by a <a href="https://animelib.me/" target="_blank">real animelib</a>.
+<p/>
 
 <span>
   <img src="https://img.shields.io/badge/license-MIT-brightgreen" alt="license"/>
