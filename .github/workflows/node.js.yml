@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ "main" ]
 
+
+defaults:
+  run: 
+    working-directory: Animelib.Frontend
+
 jobs:
   build:
 
@@ -17,8 +22,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - run: ls
-    - run: cd Animelib.Frontend
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
