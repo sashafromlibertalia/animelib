@@ -9,6 +9,7 @@ using FluentSerialization.Extensions;
 using FluentSerialization.Extensions.NewtonsoftJson;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
 
@@ -34,7 +35,7 @@ public static class ServiceCollectionsExtensions
             option.Filters.Add(new ProducesResponseTypeAttribute(typeof(BaseExceptionDto), StatusCodes.Status500InternalServerError));
             option.Filters.Add(new ConsumesAttribute("application/json"));
         });
-        
+
         collection.AddEndpointsApiExplorer().AddSwaggerGen(options =>
         {
             options.SwaggerDoc("v1", new OpenApiInfo
@@ -48,17 +49,38 @@ public static class ServiceCollectionsExtensions
                     Url = new Uri("https://github.com/sashafromlibertalia")
                 }
             });
-            
+
+            var securityScheme = new OpenApiSecurityScheme
+            {
+                Name = "JWT Authentication",
+                Description = "Enter JWT Bearer token **_only_**",
+                In = ParameterLocation.Header,
+                Type = SecuritySchemeType.Http,
+                Scheme = "bearer",
+                BearerFormat = "JWT",
+                Reference = new OpenApiReference
+                {
+                    Id = JwtBearerDefaults.AuthenticationScheme,
+                    Type = ReferenceType.SecurityScheme
+                }
+            };
+            options.AddSecurityDefinition(securityScheme.Reference.Id, securityScheme);
+            options.AddSecurityRequirement(new OpenApiSecurityRequirement
+            {
+                {securityScheme, Array.Empty<string>()}
+            });
+
             var controllerAssembly = typeof(IControllerProjectMarker).Assembly;
             var controllerAssemblyName = controllerAssembly.GetName().Name;
-            
+
             var xmlFilename = $"{controllerAssemblyName}.xml";
             var assemblyPath = controllerAssembly.Location
                 .Replace($"{controllerAssemblyName}.dll", "");
             options.IncludeXmlComments(Path.Combine(assemblyPath, xmlFilename));
         });
-        
+
         collection.AddScoped<IAnimeService, AnimeService>();
+        collection.AddScoped<IIdentityService, IdentityService>();
 
         return collection;
     }

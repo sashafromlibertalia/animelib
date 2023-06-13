@@ -11,7 +11,7 @@ namespace Animelib.Services.Services;
 public class AnimeService : IAnimeService
 {
     private readonly IDatabaseContext _context;
-    
+
     public AnimeService(IDatabaseContext context)
     {
         _context = context;
@@ -20,13 +20,13 @@ public class AnimeService : IAnimeService
     public Task<AnimeListDto> GetAnimesAsync(int page, int take)
     {
         var total = _context.Animes.Count();
-        
+
         var animes = _context.Animes
             .Skip((page - 1) * take)
             .Take(take)
             .AsEnumerable()
             .Select(x => x.ToDto());
-        
+
         return Task.FromResult(new AnimeListDto(animes, total));
     }
 
@@ -48,7 +48,7 @@ public class AnimeService : IAnimeService
         {
             throw new EntityNotFoundException($"Anime with this slug not found: {slug}");
         }
-        
+
         return anime.ToDto();
     }
 }

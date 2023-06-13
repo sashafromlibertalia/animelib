@@ -4,14 +4,25 @@ namespace Animelib.Core.Users;
 
 public partial class User : IEntity<int>
 {
-    public User(int id, string username, UserRoleEnum role = UserRoleEnum.Viewer)
+    private readonly List<WatchList> _watchLists;
+    public User(string username, string email, string password)
     {
-        Id = id;
         Username = username;
-        Role = role;
+        Email = email;
+        Password = password;
+        _watchLists = new List<WatchList>();
     }
+
+    public string Username { get; init; }
+    public string Email { get; init; }
+    public string Password { get; init; }
+    public IReadOnlyList<WatchList> WatchLists => _watchLists;
     
-    public int Id { get;  }
-    public string Username { get; }
-    public UserRoleEnum Role { get; }
+    public void AddWatchList(WatchList watchList)
+    {
+        if (watchList is null)
+            throw new NullReferenceException("WatchList cannot be null");
+        
+        _watchLists.Add(watchList);
+    }
 }

@@ -1,4 +1,5 @@
 using Animelib.Core.Animes;
+using Animelib.Core.Users;
 using Animelib.DataAccess.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,4 +14,6 @@ public sealed class DatabaseContext : DbContext, IDatabaseContext
     }
 
     public DbSet<Anime> Animes => Set<Anime>();
+    public DbSet<User> Users => Set<User>();
+    public DbSet<WatchList> WatchLists => Set<WatchList>();
 }

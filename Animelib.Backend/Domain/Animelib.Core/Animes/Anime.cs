@@ -1,4 +1,5 @@
-﻿using RichEntity.Annotations;
+﻿using Animelib.Core.Users;
+using RichEntity.Annotations;
 
 namespace Animelib.Core.Animes;
 
@@ -29,4 +30,5 @@ public partial class Anime : IEntity<int>
     public int? EpisodeCount { get; init; }
     public float Rating { get; init; }
     public string Subtype { get; init; }
+    public IReadOnlyList<WatchList> WatchLists { get; init; } = new List<WatchList>();
 }

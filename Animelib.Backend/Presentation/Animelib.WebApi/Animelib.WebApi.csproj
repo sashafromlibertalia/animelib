@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
@@ -6,21 +6,23 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace>Animelib.Controllers</RootNamespace>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <UserSecretsId>3c297dff-8f10-408c-9b93-3833133940db</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.5" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
         <PackageReference Include="ronimizy.FluentSerialization.Extensions.NewtonsoftJson" Version="1.2.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Application\Animelib.Dto\Animelib.Dto.csproj" />
-      <ProjectReference Include="..\..\Domain\Animelib.Common\Animelib.Common.csproj" />
-      <ProjectReference Include="..\..\Infrastructure\Animelib.DataAccess\Animelib.DataAccess.csproj" />
-      <ProjectReference Include="..\..\Infrastructure\Animelib.Seeding\Animelib.Seeding.csproj" />
-      <ProjectReference Include="..\Animelib.Controllers\Animelib.Controllers.csproj" />
+        <ProjectReference Include="..\..\Application\Animelib.Dto\Animelib.Dto.csproj" />
+        <ProjectReference Include="..\..\Domain\Animelib.Common\Animelib.Common.csproj" />
+        <ProjectReference Include="..\..\Infrastructure\Animelib.DataAccess\Animelib.DataAccess.csproj" />
+        <ProjectReference Include="..\..\Infrastructure\Animelib.Seeding\Animelib.Seeding.csproj" />
+        <ProjectReference Include="..\Animelib.Controllers\Animelib.Controllers.csproj" />
     </ItemGroup>
 
 </Project>
